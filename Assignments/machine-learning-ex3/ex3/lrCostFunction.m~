@@ -37,11 +37,11 @@ grad = zeros(size(theta));
 %
 
 prediction = sigmoid(X*theta);
-error = -y*log(prediction) -(1-y)*log(1 - prediction);
+error = -y'*log(prediction) -(1-y)'*log(1 - prediction);
 J = (1/m).*sum(error);
 
-error = (prediction - y)'*X;
-grad = (1/m).*error;
+grad = prediction - y;
+
 
 
 % =============================================================
