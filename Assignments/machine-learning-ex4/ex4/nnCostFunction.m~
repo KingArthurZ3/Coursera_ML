@@ -110,14 +110,8 @@ for t = 1:m
     delta_2 = delta_2(2:end);
     
     delta1_2 = delta1_2 + delta_3 * a2';
-    delta1_1 = delta1_1 + delta_2 * a1;
+    delta1_1 = delta1_1 + delta_2 * a1';
 end
-
-% 5. Compute Unregularized gradient
-Theta1_grad = (1/m) .* delta1_1;
-Theta2_grad = (1/m) .* delta1_2;
-
-
 
 % -------------------------------------------------------------
 
